@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Black Friday deals dataset Analysis</title>
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
@@ -43,7 +45,7 @@
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
 
         </div>
-        <!---------------------------------------------->
+<!---------------------------------------------->
          <div class="panel panel-primary">
           <div class="panel-heading">
             <h5 class="panel-title">Sale Sale </h5>
@@ -68,11 +70,15 @@
   </div>
 
   <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="{{ url_for('static', filename='js/bonus.js') }}"></script>
+
+   <!-- D3 JavaScript -->
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
   <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 
+ <!-----------------Footer ----------------
+ <footer class="footer">
+        <span class="bottom">UT Bootcamp Project 2 - Neeta , Zareen, Jayshree </span>
+      </footer>----------->
 </body>
 
 </html>
