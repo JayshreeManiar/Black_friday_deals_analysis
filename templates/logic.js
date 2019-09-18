@@ -12,7 +12,7 @@ function buildMetadata() {
       });
     }
    
-/*buildMetadata()
+buildMetadata()
       // Use d3 to select the panel with id of `#sample-metadata`
     var SAMPLE = d3.select(`#selDataset`);
   
@@ -25,7 +25,7 @@ function buildMetadata() {
       SAMPLE.append('h6').text(`${key}, ${value}`);
       });
   
-  //});
+  });
     
       
 }
