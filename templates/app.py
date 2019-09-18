@@ -35,5 +35,11 @@ BlackFriday = Base.classes.blackfriday
 def index():
     """Return the homepage."""
     return render_template("index.html")
+
+
+@app.route("/about")
+def index():
+    """Return the aboutpage."""
+    return render_template("about.html")
   
     
