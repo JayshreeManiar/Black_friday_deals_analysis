@@ -25,7 +25,7 @@ Base = automap_base()
 Base.prepare(db.engine, reflect=True)
 # Save references to each table
 
-Blackfriday= Base.classes.blackfriday
+Blackfriday= Base.classes.BlackFriday_new_data
 
 @app.route("/")
 def index():
