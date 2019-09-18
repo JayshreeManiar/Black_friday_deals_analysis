@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 # 1. import Flask
 from flask import Flask, jsonify
 import numpy as np
 import datetime as dt
+=======
+import os
+
+import pandas as pd
+import numpy as np
+>>>>>>> 46b072a64548910cbbf17b6bc9788b5606afc2ac
 
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
+<<<<<<< HEAD
 from sqlalchemy import create_engine, func
 
 
@@ -16,10 +24,25 @@ from sqlalchemy import create_engine, func
 #################################################
 engine = create_engine("sqlite:///Resources/hawaii.sqlite")
 
+=======
+from sqlalchemy import create_engine
+
+from flask import Flask, jsonify, render_template
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+#################################################
+# Database Setup
+#################################################
+
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/output.sqlite"
+db = SQLAlchemy(app)
+>>>>>>> 46b072a64548910cbbf17b6bc9788b5606afc2ac
 
 # reflect an existing database into a new model
 Base = automap_base()
 # reflect the tables
+<<<<<<< HEAD
 Base.prepare(engine, reflect=True)
 
 keys = Base.classes.keys()
@@ -130,3 +153,18 @@ def temp(start=None,end=None):
            
 if __name__ == "__main__":
     app.run(debug=True)
+=======
+Base.prepare(db.engine, reflect=True)
+# Save references to each table
+
+Blackfriday= Base.classes.blackfriday
+
+@app.route("/")
+def index():
+    """Return the homepage."""
+    return render_template("index.html")
+
+if __name__ == "__main__":
+    app.run()
+
+>>>>>>> 46b072a64548910cbbf17b6bc9788b5606afc2ac
