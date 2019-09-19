@@ -9,11 +9,9 @@ function buildMetadata() {
       console.log(sampleData);
      // d3.csv("BlackFriday_new_data.csv").then(function(data) {
      //  console.log(data);
-      });
-    }
-   
-buildMetadata()
-      // Use d3 to select the panel with id of `#sample-metadata`
+     // });
+    //} buildMetadata()
+   // Use d3 to select the panel with id of `#sample-metadata`
     var SAMPLE = d3.select(`#selDataset`);
   
        // Use `.html("") to clear any existing metadata
@@ -24,15 +22,14 @@ buildMetadata()
     Object.entries(sampleData).forEach(([key, value]) => {
       SAMPLE.append('h6').text(`${key}, ${value}`);
       });
+    });
   
-  });
     
-      
-}
+  }
   
-  function buildCharts(sample) {
-  /*
-    // @TODO: Use `d3.json` to fetch the sample data for the plots
+    function buildCharts(sample) {
+  
+    /*// @TODO: Use `d3.json` to fetch the sample data for the plots
     d3.json(`/samples/${sample}`).then(function(data){
       var x_axis = data.otu_ids;
       var y_axis = data.sample_values;
@@ -60,7 +57,7 @@ buildMetadata()
           xaxis: {title: "OTU ID"}
         };
         Plotly.newPlot("bubble", data, layout);
-    });
+    });*/
     // @TODO: Build a Pie Chart
       // HINT: You will need to use slice() to grab the top 10 sample_values,
       // otu_ids, and labels (10 each).
