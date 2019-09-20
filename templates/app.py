@@ -53,8 +53,6 @@ def product_id():
     return jsonify(all_product)
 
 
-
-
 if __name__ == '__main__':
     app.run(debug=True, port = 9999)
     

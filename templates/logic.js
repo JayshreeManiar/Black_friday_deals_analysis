@@ -7,8 +7,8 @@ function buildMetadata() {
     d3.json('Blackfriday.json').then(function(sampleData) {
         
       console.log(sampleData);
-     // d3.csv("BlackFriday_new_data.csv").then(function(data) {
-     //  console.log(data);
+     // d3.csv("blackfridat_rename.csv").then(function(data) {
+     // console.log(data);
      // });
     //} buildMetadata()
    // Use d3 to select the panel with id of `#sample-metadata`
@@ -29,13 +29,13 @@ function buildMetadata() {
   
     function buildCharts(sample) {
   
-    /*// @TODO: Use `d3.json` to fetch the sample data for the plots
-    d3.json(`/samples/${sample}`).then(function(data){
-      var x_axis = data.otu_ids;
-      var y_axis = data.sample_values;
-      var size = data.sample_values;
-      var color = data.otu_ids;
-      var texts = data.otu_labels;
+    // @TODO: Use `d3.json` to fetch the sample data for the plots
+    d3.json(`/api/v1.0/product_id/${sample}`).then(function(data){
+      var x_axis = data.occuption;
+      var y_axis = data.age;
+      var size = data.age;
+      var color = data.occuption;
+      var texts = data.age;
   
       // @TODO: Build a Bubble Chart using the sample data
   
@@ -53,12 +53,12 @@ function buildMetadata() {
   
       var data = [bubble];
         var layout = {
-          title: "Belly Button Bacteria",
-          xaxis: {title: "OTU ID"}
+          title: "Age vs Occuptaion",
+          xaxis: {title: "Occuption"}
         };
         Plotly.newPlot("bubble", data, layout);
-    });*/
-    // @TODO: Build a Pie Chart
+    });
+    /*// @TODO: Build a Pie Chart
       // HINT: You will need to use slice() to grab the top 10 sample_values,
       // otu_ids, and labels (10 each).
     d3.json(`/samples/${sample}`).then(function(data){
@@ -78,7 +78,7 @@ function buildMetadata() {
         title:"Bacteria pie chart"
       }
       Plotly.newPlot('pie', pie_trace, layout);
-    });
+    });*/
   
     
   
@@ -90,7 +90,7 @@ function buildMetadata() {
     var selector = d3.select("#selDataset");
   
     // Use the list of sample names to populate the select options
-    d3.json("/names").then((sampleNames) => {
+    d3.json("127.0.0.1:9999/api/v1.0/product_id").then((sampleNames) => {
       sampleNames.forEach((sample) => {
         selector
           .append("option")
@@ -101,18 +101,18 @@ function buildMetadata() {
       // Use the first sample from the list to build the initial plots
       const firstSample = sampleNames[0];
       buildCharts(firstSample);
-      buildMetadata(firstSample);
+     // buildMetadata(firstSample);
     });
   }
   
   function optionChanged(newSample) {
     // Fetch new data each time a new sample is selected
     buildCharts(newSample);
-    buildMetadata(newSample);
+   // buildMetadata(newSample);
   }
   
   // Initialize the dashboard
   init();
   // BONUS: Build the Gauge Chart
       // buildGauge(data.WFREQ);*/
-buildMetadata();
+//buildMetadata();
