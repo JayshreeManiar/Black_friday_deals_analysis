@@ -41,20 +41,18 @@
                       </li>
                       <li class="filter list-group-item">
                         <label for="Age"> Age Group</label>
-                        <select class="form-control" id="Age" onchange="getData(this.value)">
+                        <input class="form-control" id="Age" type="text" placeholder="0-17">
                           <!-- <option selected="selected" disabled>Country</option> -->
-                        </select>
-                      </li>
+                         </li>
                       <li class="filter list-group-item">
-                        <label for="state">Select Gender</label>
-                        <select class="form-control" id="gender" onchange="getData(this.value)">
+                        <label for="state">Gender</label>
+                        <input class="form-control" id="gender" type="text" placeholder="F">
                           <!-- <option selected="selected" disabled="disabled">State</option> -->
-                        </select>
-                      </li>
+                        </li>
                      </ul>
                   </div>
                   <button id="filter-btn" type="submit" class="btn btn-default">Filter Table</button>
-                  <button id="clear-btn" type="submit" class="btn btn-default">Clear Search</button>
+                 <!-- <button id="clear-btn" type="submit" class="btn btn-default">Clear Search</button> -->
                 </form>
               </div>
             </div>

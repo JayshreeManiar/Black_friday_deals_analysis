@@ -58,27 +58,27 @@ function buildMetadata() {
         };
         Plotly.newPlot("bubble", data, layout);
     });
-    /*// @TODO: Build a Pie Chart
+    // @TODO: Build a Pie Chart
       // HINT: You will need to use slice() to grab the top 10 sample_values,
       // otu_ids, and labels (10 each).
     d3.json(`/samples/${sample}`).then(function(data){
-      var values = data.sample_values.slice(0,10);
-      var labels = data.otu_ids.slice(0,10);
-      var display = data.otu_labels.slice(0,10);
+      var values = data.age;
+      var labels = data.occuption;
+      //var display = data.otu_labels.slice(0,10);
       //var hovertext = data.otu_labels.slice(0,10);
   
       var pie_trace =[{
         values: values,
         labels: labels,
-        hovertext: display,
+        //hovertext: display,
         type: "pie",
         textposition: "inside",
       }];
       var layout={
-        title:"Bacteria pie chart"
+        title:"ProductID pie chart"
       }
       Plotly.newPlot('pie', pie_trace, layout);
-    });*/
+    });
   
     
   
