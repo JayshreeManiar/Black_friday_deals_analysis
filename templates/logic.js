@@ -9,8 +9,8 @@ function buildMetadata() {
       console.log(sampleData);
      // d3.csv("blackfridat_rename.csv").then(function(data) {
      // console.log(data);
-     // });
-    //} buildMetadata()
+      });
+    } buildMetadata()
    // Use d3 to select the panel with id of `#sample-metadata`
     var SAMPLE = d3.select(`#selDataset`);
   
@@ -30,7 +30,7 @@ function buildMetadata() {
     function buildCharts(sample) {
   
     // @TODO: Use `d3.json` to fetch the sample data for the plots
-    d3.json(`/api/v1.0/product_id/${sample}`).then(function(data){
+    d3.json(`127.0.0.1:9999//api/v1.0/product_id/${sample}`).then(function(data){
       var x_axis = data.occuption;
       var y_axis = data.age;
       var size = data.age;
