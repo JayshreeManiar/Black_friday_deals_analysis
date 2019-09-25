@@ -1,30 +1,66 @@
-<!--Polar charts give each data point an equal amount of radial space.
- Segments with larger values extend further from the center of the graph.-->
-
 <!DOCTYPE html>
-<meta charset="utf-8">
+<html lang="en">
+
 <head>
-        <title>Black Friday Analysis </title>
-        <h1>Black Friday dataset Analysis with chart java script library</h1>
-        <h2>Chart.js Polar Area Chart</h2>
-        <h3>Occupation category on the basis of Age group</h3>
-</head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Black Friday dataset Analysis</title>
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
 <body>
-    
+    <!-- Navigation Section -->
+    <div class="wrapper">
+        <nav class="navbar navbar-default" style="background-color: white;">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.html">Black Friday Dataset Analysis
+                </a>
+            </div>
+              <ul class="nav navbar-nav">
+                <li><a href="index2.html">Plot 1</a></li>
+                <li><a href="index3.html">Plot 2</a></li>
+              </ul>
+            </div>
+<!-----------------Jumbotron Black friday image ----------------------->
+          <div class="container">
+              <div class="col-sm-12 jumbotron text-center" style="background-color: rgb(173, 189, 129);" >
+              <img class="nav-ufo" src="Images/image1.png" >
+              </div>
+          </div>
+      </nav>
+   </div>
+  </div>
+ <!-----------------Polar chart------------------->   
+ <div class="wrapper">
+  <div class="chart-container">
     <canvas id="polarChart" width="800" height="450"></canvas>
-</body>
+  </div>
+ </div>
+
+  <!-- Footer  -->
+<footer class="footer">
+  <div class="footer">Made By Neeta, Zareen and Jayshree </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-<style>
-
-body {
-  text-align: center;
-}
-
-</style>
-<body>
-<!--<script src="//d3js.org/d3.v3.min.js"></script>-->
 
 
 
 <script src="Polar.js"></script>
+</body>
+
+</html>
