@@ -30,7 +30,7 @@ function buildMetadata() {
     function buildCharts(sample) {
   
     // @TODO: Use `d3.json` to fetch the sample data for the plots
-    d3.json(`/api/v1.0/product_id/${sample}`).then(function(data){
+    d3.json(`/api/v1.0/product_id`).then(function(data){
       var x_axis = data.occuption;
       var y_axis = data.age;
       var size = data.age;
@@ -61,7 +61,7 @@ function buildMetadata() {
     // @TODO: Build a Pie Chart
       // HINT: You will need to use slice() to grab the top 10 sample_values,
       // otu_ids, and labels (10 each).
-    d3.json(`/samples/${sample}`).then(function(data){
+    d3.json(`/api/v2.0/BlackFriday`).then(function(data){
       var values = data.age;
       var labels = data.occuption;
       //var display = data.otu_labels.slice(0,10);

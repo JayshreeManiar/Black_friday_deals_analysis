@@ -17,7 +17,7 @@ app = Flask(__name__)
 # Database Setup
 #################################################
 
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///blackfriday.sqlite"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/blackfriday.sqlite"
 #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', '') or "sqlite:///db.sqlite"
 db = SQLAlchemy(app)
 
@@ -60,30 +60,30 @@ def product_id():
 def Filter_Search(blackfriday):
     """Return the MetaData for a given blackfriday."""
     sel = [
-        BlackFriday.user_id,
-        BlackFriday.gender,
-        BlackFriday.age,
-        BlackFriday.occupation,
-        BlackFriday.product_category1,
-        BlackFriday.product_category2,
-        BlackFriday.product_category3,
+        Blackfriday.age, Blackfriday.occupation
     ]
+    results = db.session.query(*sel).group_by(Blackfriday.age).all()
+    occupation = [result[0] for result in results]
+    age = [result[1] for result in results]
+    trace = {
+        "x": occuption,
+        "y": age,
+        "type": "bar"
+    }
 
-    results = db.session.query(*sel).filter(BlackFriday.blackfriday == blackfriday).all()
+    return jsonify(trace)
+    
+    
 
     # Create a dictionary entry for each row of metadata information
-    Filter_Search = {}
+""" Filter_Search = {}
     for result in results:
-        Filter_Search["user_id"] = result[0]
-        Filter_Search["gender"] = result[1]
-        Filter_Search["age"] = result[2]
-        Filter_Search["occupation"] = result[3]
-        Filter_Search["product_category1"] = result[4]
-        Filter_Search["product_category2"] = result[5]
-        Filter_Search["product_category3"] = result[6]
+        Filter_Search["age"] = result[0]
+        Filter_Search["occupation"] = result[1]
+        
 
     print(Filter_Search)
-    return jsonify(Filter_Search)
+    return jsonify(Filter_Search)"""
 
 
 if __name__ == '__main__':
