@@ -1,0 +1,7 @@
+ return (
+        f"Welcome<br/>"
+        f"Available Routes:<br/>"
+        f"/api/v1.0/product_id<br/>"
+        f"/api/v2.0/BlackFriday"
+        
+    )
