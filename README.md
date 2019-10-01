@@ -19,7 +19,12 @@ Created a table based on user search. We created 3 filters as City,Age, Gender.
 
 
 Analysis
+
 1.We performed exploratory data analysis to find interesting trends from the dataset.
+
 2.We analyze the amount that a customer is likely to spend on Black Friday
+
 3.It can be easily observed that people having occupations 0 and 4 spent the most money during Black Friday sales.
+
 4.we can easily conclude that the highest number of customers belong to the age group between 26 and 35, for both genders. Younger and older population are far less represented on Black Friday. Based on these results, the retail store should sell most of the products that target people in their late twenties to early thirties.
+
