@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Black Friday dataset Analysis</title>
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+<!-- Navigation Section -->
+<div class="wrapper">
+    <nav class="navbar navbar-default" style="background-color: white;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Black Friday Dataset Analysis
+            </a>
+        </div>
+          
+        </div>
+<!-----------------Jumbotron Black friday image ----------------------->
+      <div class="container">
+          <div class="col-sm-12 jumbotron text-center" style="background-color: rgb(173, 189, 129);" >
+          <img class="nav-ufo" src="Images/image1.png" >
+          </div>
+      </div>
+  </nav>
+
+
+<!-------------Filter Section---------------------> 
+<div class="container">
+  <div class="row margin-top-50">
+    <div class="col-md-2">
+      <aside class="filters">
+        <div class="panel panel-default">
+          <div class="panel-heading">Filter Search</div>
+          <div class="panel-body">
+            <form>
+              <div class="form-group">
+                <ul class="list-group" id="filters">
+                 <!-- <li class="filter list-group-item">
+                    <label for="city_category">Enter Occupation </label>
+                    <input class="form-control" id="occupation" type="text" placeholder="1">
+                  </li>-->
+                  <li class="filter list-group-item">
+                    <label for="country">Select a City</label>
+                    <input class="form-control" id="city" type="text" placeholder="A">
+                      <!-- <option selected="selected" disabled>Country</option> -->
+                    
+                  </li>
+​
+                  <li class="filter list-group-item">
+                    <label for="Age"> Age Group</label>
+                    <input class="form-control" id="Age" type="text" placeholder="0-17">
+                      <!-- <option selected="selected" disabled>Country</option> -->
+                    
+                    </li>
+                  <li class="filter list-group-item">
+                    <label for="state">Gender</label>
+                    <input class="form-control" id="gender" type="text" placeholder="F">
+                      <!-- <option selected="selected" disabled="disabled">State</option> -->
+                    </li>
+                 </ul>
+              </div>
+              <button id="filter-btn" type="submit" class="btn btn-default">Filter Table</button>
+            <button id="clear-btn" type="submit" class="btn btn-default">Clear Search</button> 
+            </form>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div class="col-md-10">
+      <div id="table-area" class="">
+        <table id="BlackFriday Deals Data" class="table table-striped">
+          <thead>
+            <tr>
+              <th class="table-head">user_id</th>
+              <th class="table-head">product_id</th>
+              <th class="table-head">gender</th>
+              <th class="table-head">age</th>
+              <th class="table-head">occupation</th>
+              <th class="table-head">city</th>
+              <th class="table-head">years_lived</th>
+              <th class="table-head">marital_status</th>
+              <th class="table-head">pd_cat_1</th>
+              <th class="table-head">pd_cat_2</th>
+              <th class="table-head">pd_cat_3</th>
+              <th class="table-head">purchase</th>
+​
+​
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+   </div>
+
+<!--<div class="wrapper">-->
+    <div class="chart-container">
+      <h1>Black Friday dataset Analysis with chart java script library</h1>
+      <h2>Chart.js Polar Area Chart</h2>
+      <h3>Occupation category on the basis of Age group</h3>
+      <canvas id="polarChart" width="800" height="450"></canvas>
+
+      
+      <h2>Chart.js Donut Chart</h2>
+      <canvas id="doughnut-chart" width="100" height="150" ></canvas>
+     <!-- <canvas id="doughnut-chart" width="100" height="150"  responsive=true maintainAspectRatio= false ></canvas>-->
+    </div>
+
+   <style>
+    body {
+     text-align: center;
+    }
+    </style>
+    <body>
+<footer class="footer">
+  <span class="bottom">Deals Deals Deals</span>
+</footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+<script src="data2.js"></script>
+<script src="allchart.js"></script>
+</body>
+​
+</html>
