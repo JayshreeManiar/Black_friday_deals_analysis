@@ -14,124 +14,100 @@
 <body>
 <!-- Navigation Section -->
 <div class="wrapper">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" style="background-color: white;">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="index.html">Black Friday Dataset Analysis
             </a>
-            <button class="navbar-toggler" type="button" aria-expanded="false" ></button>
-            <a href="index2.html">Click here to go to next page</a>
-          </button>
         </div>
+          <ul class="nav navbar-nav">
+            <li><a href="index2.html">Plot 1</a></li>
+            <li><a href="index3.html">Plot 2</a></li>
+          </ul>
+        </div>
+<!-----------------Jumbotron Black friday image ----------------------->
+      <div class="container">
+          <div class="col-sm-12 jumbotron text-center" style="background-color: rgb(173, 189, 129);" >
+          <img class="nav-ufo" src="Images/image1.png" >
+          </div>
       </div>
-    </nav> 
-
-  <!-----------------Jumbotron----------------------->
-  <div class="container">
-    <div class="col-sm-12 jumbotron text-center">
-        <img class="nav-ufo" src="Images/image1.png" >
-      </div>
-  </div>
+  </nav>
 
 <!-------------Filter Section---------------------> 
-    <div class="container">
-      <div class="row margin-top-50">
-        <div class="col-md-2">
-          <aside class="filters">
-            <div class="panel panel-default">
-              <div class="panel-heading">Filter Search</div>
-              <div class="panel-body">
-                <form>
-                  <div class="form-group">
-                    <ul class="list-group" id="filters">
-                      <li class="filter list-group-item">
-                        <label for="userid">Select User ID </label>
-                        <select class="form-control" id="userID" onchange="getData(this.value)">
+<div class="container">
+    <div class="row margin-top-50">
+      <div class="col-md-2">
+        <aside class="filters">
+          <div class="panel panel-default">
+            <div class="panel-heading">Filter Search</div>
+            <div class="panel-body">
+              <form>
+                <div class="form-group">
+                  <ul class="list-group" id="filters">
+                    <li class="filter list-group-item">
+                      <label for="city_category">Enter Occupation </label>
+                      <input class="form-control" id="occupation" type="text" placeholder="1">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label for="country">Select a City</label>
+                      <select class="form-control" id="city" onchange="getData(this.value)">
+                        <!-- <option selected="selected" disabled>Country</option> -->
+                      </select>
+                    </li>
+
+                    <li class="filter list-group-item">
+                      <label for="Age"> Age Group</label>
+                      <select class="form-control" id="Age" onchange="getData(this.value)">
+                        <!-- <option selected="selected" disabled>Country</option> -->
+                      </select> 
                       </li>
-                      <li class="filter list-group-item">
-                        <label for="productcat">Select Prodcut Category</label>
-                        <select class="form-control" id="productcat" onchange="getData(this.value)">
-                          <!-- <option selected="selected" disabled>Product Category</option> -->
-                        </select>
+                    <li class="filter list-group-item">
+                      <label for="state">Gender</label>
+                      <select class="form-control" id="gender" onchange="getData(this.value)">
+                        <!-- <option selected="selected" disabled="disabled">State</option> -->
+                      </select>
                       </li>
-                      <li class="filter list-group-item">
-                        <label for="gender">Select Gender</label>
-                        <select class="form-control" id="gender" onchange="getData(this.value)">
-                          <!-- <option selected="selected" disabled="disabled">Gender</option> -->
-                        </select>
-                      </li>
-                      <li class="filter list-group-item">
-                        <label for="age">Select Age</label>
-                        <select class="form-control" id="age"onchange="getData(this.value)">
-                          <!-- <option value="none" selected hidden >Age</option> -->
-                        </select>
-                      </li>
-                      <li class="filter list-group-item">
-                        <label for="occupation">Select Occupation</label>
-                        <select class="form-control" id="occupation">
-                          <!-- <option selected="selected" disabled="disabled">Occupation</option> -->
-                        </select>
-                      </li>
-                      <li class="filter list-group-item">
-                        <label for="city">Select a City</label>
-                        <select class="form-control" id="city">
-                          <!-- <option selected="selected" disabled="disabled">City</option> -->
-                        </select>
-                      </li>
-                    </ul>
-                  </div>
-                  <button id="filter-btn" type="submit" class="btn btn-default">Filter Table</button>
-                  <button id="clear-btn" type="submit" class="btn btn-default">Clear Search</button>
-                  <img class="nav-ufo" src="Images/deal.png"  >
-                </form>
-              </div>
+                   </ul>
+                </div>
+                <button id="filter-btn" type="submit" class="btn btn-default">Filter Table</button>
+               <button id="clear-btn" type="submit" class="btn btn-default">Clear Search</button>
+               <img class="nav-ufo" src="Images/deal.png"  > 
+              </form>
             </div>
-          </aside>
-        </div>
-        <!-------Table AREA ----------------------------------------->
-        <div class="col-md-10">
-          <div id="table-area" class="">
-            <table id="ufo-table" class="table table-striped">
-              <thead>
-                <tr>
-                  <th class="table-head">UserID</th>
-                  <th class="table-head">Product_Category</th>
-                  <th class="table-head">Gender</th>
-                  <th class="table-head">Age</th>
-                  <th class="table-head">Occupation</th>
-                  <th class="table-head">City</th>
-                  <th class="table-head">Purchase</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
           </div>
+        </aside>
+      </div>
+      <div class="col-md-10">
+        <div id="table-area" class="">
+          <table id="BlackFriday Deals Data" class="table table-striped">
+            <thead>
+              <tr>
+                <th class="table-head">user_id</th>
+                <th class="table-head">product_id</th>
+                <th class="table-head">gender</th>
+                <th class="table-head">age</th>
+                <th class="table-head">occupation</th>
+                <th class="table-head">city_category</th>
+                <th class="table-head">marital_status</th>
+                <th class="table-head">purchase</th>
+
+
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-md-5">
-    <div id="pie"></div>
-    <p>pie chart</p>
-  </div>
-  <div class="col-md-5">
-    <div id="gauge"></div>
-  </div>
-</div>
-</div>
-<div class="row">
-<div class="col-md-12">
-  <div id="bubble"></div>
-</div>
-</div>
+
 
  <!-- Footer  -->
   <footer class="footer">
-      <div class="container">
-  <span class="bottom">Made By Neeta, Zareen and Jayshree </span>
-  </div>
+    <div class="footer">Made By Neeta, Zareen and Jayshree </div>
   </footer>
-</div>
+  
+
  <!-- Bootstrap JS -->
  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
  crossorigin="anonymous"></script>
@@ -146,6 +122,8 @@
 <!--<script src="{{ url_for('static', filename='js/bonus.js') }}"></script>-->
 <!--<script src="{{ url_for('static', filename='js/app.js') }}"></script>-->
 <script src="{{ url_for('static', filename='logic.js') }}"></script>
+<script src="data.js"></script>
+  <script src="zareen-app.js"></script>
 </body>
 
 </html>

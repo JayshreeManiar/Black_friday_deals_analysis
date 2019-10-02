@@ -10,8 +10,27 @@ body {
   padding: 0;
   margin: 0;
 }
+/* Navbar */
+.navbar{
+  max-height: 70px; 
+}
+.navigation .navbar-brand{
+  color: white; 
+  margin-left: 30px; 
+  padding: inherit; 
+  font-weight: bold; 
+  background-color: #0BADA6;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.navbar{
+  background-color: white; 
+  font-size: 15px; 
+}
 
-
+a{
+  color: rgb(19, 25, 31);
+  font-size: 15px; 
+}
 /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
 .wrapper {
   position: relative;
@@ -29,22 +48,25 @@ body {
 
 /* The footer is positioned at the bottom of the page */
 /* The code styles the text at the bottom of the footer */
-.footer > .bottom {
-  position: relative; /*will need to change this to absolute for index2.html */
-  right: 0;
-  bottom: 0;
+/* Footer */
+footer{
+  background-color: #40a1be; 
+  border-top-style: solid; 
+  border-top-width: 5px; 
+  border-top-color: rgb(154, 11, 173);
+  color: white; 
+  min-height: 55px; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px; 
+  text-align: center; 
+  position: fixed;
   left: 0;
-  padding: 5px;
-  background: rgb(226, 43, 165);
-  text-align: center
-  
-}
+  bottom: 0;
+  width: 100%;
+  padding-top: 15px; 
+  }
 
-.navbar {
-  padding: 5px;
-  margin: 0;
-  background-color: aquamarine;
-}
+
 
 
 
@@ -84,16 +106,9 @@ select {
 }
 
 
-.navbar{
-  background-color:rgb(29, 72, 100)); 
-  font-size: 15px; 
-  max-height: 57px; 
-}
 
-.navbar-toggler{
-  align-self: right;
-  background-color: Green;
-}
+
+
 .button:focus {
 
   outline: 1px dotted;
