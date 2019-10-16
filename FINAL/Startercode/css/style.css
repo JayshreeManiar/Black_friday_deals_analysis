@@ -27,18 +27,15 @@ body {
   font-size: 15px; 
 }
 
+
+
+
 a{
   color: rgb(19, 25, 31);
   font-size: 15px; 
 }
 /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
-.wrapper {
-  position: relative;
-  min-height: 100%;
-  padding-bottom: 130px;
-  overflow: auto;
-  background: white;
-}
+
 .row {
   background: rgba(177, 177, 72, 0.952);
   position: relative;
@@ -46,29 +43,12 @@ a{
   overflow: auto;
 }
 
-/* The footer is positioned at the bottom of the page */
-/* The code styles the text at the bottom of the footer */
-/* Footer */
-footer{
-  background-color: #40a1be; 
-  border-top-style: solid; 
-  border-top-width: 5px; 
-  border-top-color: rgb(154, 11, 173);
-  color: white; 
-  min-height: 55px; 
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px; 
-  text-align: center; 
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding-top: 15px; 
-  }
 
 .chart-container {
-    width: 700px;
-    height:700px;
+    width: 800px;
+    height:800px;
+    margin-left: 400px;
+    align-content: center;
 }
 
 
